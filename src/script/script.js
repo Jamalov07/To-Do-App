@@ -140,6 +140,7 @@ submitform.addEventListener("submit", (e) => {
 function forSuccess() {
   toast.classList.add("bg-green-600");
   toast.classList.toggle("translate-x-72");
+  notif.textContent = "Successfully Added";
   setTimeout(() => {
     toast.classList.toggle("translate-x-72");
   }, 2000);
