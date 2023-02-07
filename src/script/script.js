@@ -125,6 +125,7 @@ function addNewTask() {
     task.push(newTask);
     taskTitle.value = "";
     //toast success
+    forSuccess();
   }
 }
 
@@ -134,10 +135,11 @@ submitform.addEventListener("submit", (e) => {
   mainList.innerHTML = "";
   renderTaskList(task);
   countTaskDone(task);
-  forSuccess();
 });
 
 function forSuccess() {
+  toast.classList.remove("bg-red-600");
+  toast.classList.remove("bg-yellow-600");
   toast.classList.add("bg-green-600");
   toast.classList.toggle("translate-x-72");
   notif.textContent = "Successfully Added";
