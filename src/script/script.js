@@ -215,6 +215,7 @@ mainList.addEventListener("click", (e) => {
     renderTaskList(task);
     countTaskDone(task);
   } else if (e.target.classList.contains("edit")) {
+    
     const id = e.target.getAttribute("data-edit");
     updateIgnoredTask(id);
     // console.log(id);
@@ -224,6 +225,7 @@ mainList.addEventListener("click", (e) => {
     el.querySelector(".saved").classList.add("hidden");
     el.querySelector(".changed").classList.remove("hidden");
     el.querySelector(".changed").classList.add("flex");
+
   } else if (e.target.classList.contains("save")) {
     const id = e.target.getAttribute("data-save");
     const el = mainList.querySelector(`[data-id = "${id}"]`);
